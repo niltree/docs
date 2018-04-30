@@ -17,13 +17,12 @@ export default withDoc({
   editUrl: 'pages/docs/getting-started/five-minute-guide-to-now.js',
 })(markdown(components)`
 
-With Now's help, you can deploy and publish any kind of web application (or service) in
-under five minutes.
+Niltree can run any kind of WebGL website, twice as fast as Chrome. You can get this up and running in under five minutes.
 
-This guide will show you how to deploy such an app, connect it to a
-domain name of your choice and configure an SSL certificate.
+This guide will show you how to install Niltree and open a WebGL site.
 
-## Installing Now Desktop
+
+## Installing Niltree
 
 ${
   <Image
@@ -33,41 +32,16 @@ ${
   />
 }
 
-The best way to get started with Now on your device
-is [Now Desktop](https://zeit.co/download), a minimal application
-that runs in your menubar and comes with the following features:
+### Step 1: Install Node >= 9.9
 
-- Installs [Now CLI](https://zeit.co/download#command-line) and keeps it
-up to date automatically (the command line interface for interacting with Now).
-- Provides a realtime feed of the activity
-on your account and teams that you've joined.
-- Let's you deploy any kind of application or file by
-simply dragging and dropping it onto its menubar icon or selecting
-it using a file picker.
+Ensure you have [Node &gt;= 9.9](https://nodejs.org/en/download/):
 
-## Signing Up
+${<Code>{`
+$ node --version
+v9.9.0
+`}</Code>}
 
-Once you've downloaded [Now Desktop](https://zeit.co/download) open it and follow the
-instructions.
-
-After you've completed the signup process (you can also use the form
-to log in), a window should open with your account's event feed inside.
-
-## Deployment
-
-Now that we're logged in, let's begin with deploying a
-simple static web site.
-
-Firstly, create a directory called \`my-web-app\` and add the following content to a file called \`index.html\`.
-
-${<Code>{`<!DOCTYPE html>
-<html>
-  <body>
-    This is a static web app.
-  </body>
-</html>`}</Code>}
-
-> You can also use a [Node.js app](https://github.com/zeit/nextgram) or an [app with a Dockerfile](https://github.com/now-examples/cobol-hello-world) instead of this simple static app.
+> If you don't have [Node &gt;= 9.9](https://nodejs.org/en/download/), you can use [nvm](https://github.com/creationix/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows) to install it.
 
 After you have added the content, visit the \`my-web-app\` directory using a terminal and run this command:
 
