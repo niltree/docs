@@ -1,14 +1,14 @@
-# ZEIT Documentation
+# Niltree Documentation
 
-This is the public documentation for **ZEIT now** all other related services.<br/>
-You can access this documentation online at https://zeit.co/docs .
+This is the public documentation for **Niltree Browser** all other related services.<br/>
+You can access this documentation online at [https://docs.niltree.com](https://docs.niltree.com).
 
 ### Running Locally
 
 Download the copy of this repostory. 
 
 ~~~sh
-git clone https://github.com/zeit/docs.git
+git clone https://github.com/niltree/docs.git
 ~~~
 
 Then visit to the downloaded repository and install dependencies with:
@@ -18,7 +18,7 @@ npm install
 ~~~
 
 Then you can run the app with:
-(The app is written in [Next.js](https://github.com/zeit/next.js))
+(The app is written in [Next.js](https://github.com/niltree/next.js))
 
 ~~~sh
 npm run dev
