@@ -1,6 +1,6 @@
 # Niltree Documentation
 
-This is the public documentation for **Niltree Browser** all other related services.<br/>
+This is the public documentation for **[Niltree Browser](https://github.com/niltree/niltree)** and all other related services.<br/>
 You can access this documentation online at [https://docs.niltree.com](https://docs.niltree.com).
 
 ### Running Locally
