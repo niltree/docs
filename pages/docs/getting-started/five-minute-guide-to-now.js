@@ -2,9 +2,11 @@ import markdown from 'markdown-in-js'
 import asset from 'next/asset'
 import withDoc, { components } from '../../../lib/with-doc'
 
-import { leo, arunoda } from '../../../lib/data/team'
-import { TerminalInput } from '../../../components/text/terminal'
-import { Code } from '../../../components/text/code'
+import { shawwn } from '../../../lib/data/team'
+import {
+  TerminalInput,
+  TerminalOutput
+} from '../../../components/text/terminal'
 import { HR } from '../../../components/text/paragraph'
 import Image from '../../../components/image'
 import Now from '../../../components/now/now'
@@ -12,8 +14,8 @@ import Now from '../../../components/now/now'
 // prettier-ignore
 export default withDoc({
   title: 'Five Minute Guide',
-  date: '30 July 2017',
-  authors: [leo, arunoda],
+  date: '30 April 2018',
+  authors: [shawwn],
   editUrl: 'pages/docs/getting-started/five-minute-guide-to-now.js',
 })(markdown(components)`
 
@@ -24,28 +26,32 @@ This guide will show you how to install Niltree and open a WebGL site.
 
 ## Installing Niltree
 
-${
-  <Image
-    src={asset(`${IMAGE_ASSETS_URL}/docs/installation/now-desktop-mac.png`)}
-    width={550}
-    height={380}
-  />
-}
-
 ### Step 1: Install Node >= 9.9
 
-Ensure you have [Node &gt;= 9.9](https://nodejs.org/en/download/):
+Ensure you have [Node >= 9.9](https://nodejs.org/en/download/):
 
-${<Code>{`
-$ node --version
-v9.9.0
-`}</Code>}
+${
+  <TerminalOutput>
+    <pre>
+      {`$ node --version
+v9.9.0`}
+    </pre>
+  </TerminalOutput>
+  }
 
-> If you don't have [Node &gt;= 9.9](https://nodejs.org/en/download/), you can use [nvm](https://github.com/creationix/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows) to install it.
+> If you don't have [Node >= 9.9](https://nodejs.org/en/download/), you can use [nvm](https://github.com/creationix/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows) to install it.
 
-After you have added the content, visit the \`my-web-app\` directory using a terminal and run this command:
+### Step 2: Install Windows build tools
 
-${<TerminalInput>now</TerminalInput>}
+If you're on Windows, install [windows-build-tools](https://www.npmjs.com/package/windows-build-tools) from a PowerShell Admin prompt:
+
+${<TerminalInput>npm install --global --production windows-build-tools</TerminalInput>}
+
+> To start a PowerShell Admin prompt, right-click on PowerShell and run "as Administrator".
+
+### Step 3: Install Niltree
+
+${<TerminalInput>npm i -g niltree</TerminalInput>}
 
 ${<Now color="#000"/>} will deploy the app and give you a URL as shown below.
 
