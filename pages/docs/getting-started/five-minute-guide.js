@@ -51,6 +51,8 @@ ${<TerminalInput>npm install --global --production windows-build-tools</Terminal
 
 ### Step 3: Install ${<Now color="#000"/>}
 
+${<TerminalInput>npm i -g niltree</TerminalInput>}
+
 ## Viewing websites
 
 
