@@ -2,8 +2,8 @@ export default function Now(props) {
   const color = props.color || '#fff'
 
   return (
-    <span className="now" style={{ color }}>
-      Now
+    <span className="niltree" style={{ color }}>
+      Niltree
       <style jsx>
         {`
           span span {
