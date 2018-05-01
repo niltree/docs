@@ -1,0 +1,3 @@
+[submodule "static/book"]
+	path = static/book
+	url = https://github.com/niltree/book
