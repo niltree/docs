@@ -44,7 +44,7 @@ app.prepare().then(() => {
       } else {
         // Set the assetPrefix for now
         // It needs to be the https version, since now is always HTTPS
-        app.setAssetPrefix(`https://${req.headers.host}`)
+        app.setAssetPrefix(`http://${req.headers.host}`)
       }
 
       handleNextRequests(req, res, parsedUrl)
