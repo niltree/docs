@@ -1,5 +1,5 @@
 import markdown from 'markdown-in-js'
-import asset from 'next/asset'
+//import asset from 'next/asset'
 import withDoc, { components } from '../../../lib/with-doc'
 
 import { shawwn } from '../../../lib/data/team'
@@ -7,6 +7,7 @@ import {
   TerminalInput,
   TerminalOutput
 } from '../../../components/text/terminal'
+//import { Code } from '../../../components/text/code'
 import { HR } from '../../../components/text/paragraph'
 import Image from '../../../components/image'
 import Now from '../../../components/now/now'
@@ -53,84 +54,81 @@ ${<TerminalInput>npm install --global --production windows-build-tools</Terminal
 
 ${<TerminalInput>npm i -g niltree</TerminalInput>}
 
-## Viewing websites
+## Viewing Websites
 
+Let's open a ThreeJS website in ${<Now color="#000"/>}.
 
-![image](https://user-images.githubusercontent.com/59632/39456077-9928d6dc-4ca9-11e8-9f68-63613b270673.png)
+Go to the ThreeJS [examples](https://threejs.org/examples/) page using your web browser of choice (Chrome, Firefox, etc):
 
+![https://threejs.org/examples](static/book/.gitbook/assets/image%20%281%29.png)
 
+Most of these ThreeJS examples should run fine in ${<Now color="#000" />}. Let's try the first one, [animation/cloth](https://threejs.org/examples/#webgl_animation_cloth).  Observe that this is a WebGL site, and that it renders fine in Chrome:
 
+![A simple ThreeJS webpage: https://threejs.org/examples/\#webgl\_animation\_cloth](static/book/.gitbook/assets/image%20%286%29.png)
 
+Now we're going to open this same site using ${<Now color="#000" />}.
 
+* Open your terminal \(we like [hyper](https://hyper.is/)\):
 
+![](static/book/.gitbook/assets/image%20%2812%29.png)
 
+* If you're on Windows, type \`niltree-win\` and press enter.
+* Other platforms, type \`niltree\`.
 
+![Niltree&apos;s default prompt](static/book/.gitbook/assets/image%20%289%29.png)
 
+> If you get an error about node module version, ensure \`node --version\` is &gt;= 9.9:
+>
+> ${<TerminalInput>nvm install 9.9 && nvm use 9.9</TerminalInput>}
+>
+> and then try again. If you still get an error, re-run this:
+>
+> ${<TerminalInput>npm i -g niltree</TerminalInput>}
 
+* Paste the ThreeJS URL \([https://threejs.org/examples/\#webgl\_animation\_cloth](https://threejs.org/examples/#webgl_animation_cloth)\) and press enter.
 
+${<Now color="#000" />} will open and run the site:
 
+![](static/book/.gitbook/assets/image%20%282%29.png)
 
+${<Image caption={"ThreeJS cloth simulation: https://threejs.org/examples/#webgl_animation_cloth"}
+         src={"static/book/.gitbook/assets/image.png"}
+         width={650}
+         height={650 * 721 / 896}
+         />} 
 
+Let's navigate to a different site.
 
-${<TerminalInput>npm i -g niltree</TerminalInput>}
+* Pick out a different ThreeJS [example ](https://threejs.org/examples/)that you like:
 
-${<Now color="#000"/>} will deploy the app and give you a URL as shown below.
+${<Image caption="ThreeJS minecraft demo: https://threejs.org/examples/webgl_geometry_minecraft.html"
+         src="static/book/.gitbook/assets/image%20%2813%29.png"
+         width={650}
+         height={650 * 721 / 896}
+         />} 
 
-${<Image
-  src={asset(`${IMAGE_ASSETS_URL}/docs/five-minute-guide-to-now/deploy.png`)}
-  width={650}
-  height={255}
-  caption="Getting a unique URL after the deployment."
-/>}
+* Switch back to ${<Now color="#000" />}'s command prompt and paste the URL \(e.g. [https://threejs.org/examples/\#webgl\_geometry\_minecraft](https://threejs.org/examples/#webgl_geometry_minecraft)\):
 
-This is a URL for the current deployment of the app. You can access this version of the app anytime with this URL.
+![](static/book/.gitbook/assets/image%20%284%29.png)
 
-## Domain Name
+${<Image caption="["
+         src="static/book/.gitbook/assets/image%20%283%29.png"
+         width={650}
+         height={650 * 721 / 896}
+         />} 
+ 
+### ${<Now color="#000" />}'s command prompt
 
-Now you have a unique URL(<https://my-web-app-avvuiuuwto.now.sh>) for your app. But you probably want a nicer-sounding URL before directing your users there. The next step is to map the "now.sh" URL to a domain name that you prefer.
+The ${<Now color="#000" />} command prompt is a NodeJS REPL. If you're a node developer, the interface should be quite familiar. Open ${<Now color="#000" />} and run \`.help\`:
 
-Let's assume the domain name is \`my-web-app.com\`, and you haven't bought it yet. <br/>
-To map this domain name to the app's unique URL, run this command:
+![Niltree&apos;s .help command](static/book/.gitbook/assets/image%20%287%29.png)
 
-${<TerminalInput>now alias https://my-web-app-avvuiuuwto.now.sh my-web-app.com</TerminalInput>}
+> * Pressing up and down will scroll through your REPL history.
+> * Pasting a URL into the REPL is shorthand for typing \`.go <url>\` into the REPL.
 
-Since you haven't bought the domain name yet, you will be asked to enter your credit card information to buy it.
-You can do that by running this command:
+Similar to Chrome's devtools, you can evaluate any expression you want in the context of the current website. Navigate somewhere and type \`window.location\`:
 
-${<TerminalInput>now cc add</TerminalInput>}
-
-You may choose to upgrade your account to the "Premium" plan by running this command:
-
-${<TerminalInput>now upgrade</TerminalInput>}
-
-Now, run the domain mapping command again and follow these instructions:
-
-${<TerminalInput>now alias https://my-web-app-avvuiuuwto.now.sh my-web-app.com</TerminalInput>}
-
-Once you've done that, you'll be able to access your app using <https://my-web-app.com>.
-It is automatically configured with a [Let's Encrypt](https://letsencrypt.org/) SSL certificate and served with HTTPS.
-
-${<Image
-  src={asset(`${IMAGE_ASSETS_URL}/docs/five-minute-guide-to-now/domain-setup.png`)}
-  width={650}
-  height={412}
-  caption="After mapping a domain name to a deployment."
-/>}
-
-## Updates
-
-If you've made any changes to your app, you will need to deploy the latest version of your app. To do that, run this command:
-
-${<TerminalInput>now</TerminalInput>}
-
-You will receive a unique URL for this deployment. Let's assume that the new URL is <https://my-web-app-ttfxzqwbwz.now.sh>.
-
-You can map this new URL to your domain name by running this command:
-
-${<TerminalInput>now alias https://my-web-app-ttfxzqwbwz.now.sh my-web-app.com</TerminalInput>}
-
-Now everything is ready.<br/>
-Your users can access the updated web app at <https://my-web-app.com>.
+![window.location](static/book/.gitbook/assets/image%20%2811%29.png)
 
 ${<HR />}
 
