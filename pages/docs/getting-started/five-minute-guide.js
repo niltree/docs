@@ -19,12 +19,12 @@ export default withDoc({
   editUrl: 'pages/docs/getting-started/five-minute-guide.js',
 })(markdown(components)`
 
-Niltree can run any kind of WebGL website, twice as fast as Chrome. You can get this up and running in under five minutes.
+${<Now color="#000"/>} can run any kind of WebGL website, twice as fast as Chrome. You can get this up and running in under five minutes.
 
-This guide will show you how to install Niltree and open a WebGL site.
+This guide will show you how to install ${<Now color="#000"/>} and open a WebGL site.
 
 
-## Installing Niltree
+## Installing ${<Now color="#000"/>}
 
 ### Step 1: Install Node >= 9.9
 
@@ -49,7 +49,26 @@ ${<TerminalInput>npm install --global --production windows-build-tools</Terminal
 
 > To start a PowerShell Admin prompt, right-click on PowerShell and run "as Administrator".
 
-### Step 3: Install Niltree
+### Step 3: Install ${<Now color="#000"/>}
+
+## Viewing websites
+
+
+![image](https://user-images.githubusercontent.com/59632/39456077-9928d6dc-4ca9-11e8-9f68-63613b270673.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ${<TerminalInput>npm i -g niltree</TerminalInput>}
 
