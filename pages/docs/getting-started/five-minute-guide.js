@@ -60,11 +60,19 @@ Let's open a ThreeJS website in ${<Now color="#000"/>}.
 
 Go to the ThreeJS [examples](https://threejs.org/examples/) page using your web browser of choice (Chrome, Firefox, etc):
 
-![https://threejs.org/examples](static/book/.gitbook/assets/image%20%281%29.png)
+${<Image caption="[https://threejs.org/examples"
+         src="static/book/.gitbook/assets/image%20%281%29.png"
+         width={650}
+         height={650 * 721 / 896}
+         />} 
 
 Most of these ThreeJS examples should run fine in ${<Now color="#000" />}. Let's try the first one, [animation/cloth](https://threejs.org/examples/#webgl_animation_cloth).  Observe that this is a WebGL site, and that it renders fine in Chrome:
 
-![A simple ThreeJS webpage: https://threejs.org/examples/\#webgl\_animation\_cloth](static/book/.gitbook/assets/image%20%286%29.png)
+${<Image caption="A simple ThreeJS webpage: https://threejs.org/examples/#webgl_animation_cloth"
+         src="static/book/.gitbook/assets/image%20%286%29.png"
+         width={650}
+         height={650 * 721 / 896}
+         />}
 
 Now we're going to open this same site using ${<Now color="#000" />}.
 
