@@ -34,9 +34,11 @@ app.prepare().then(() => {
   const server = micro(
     removeEndSlash((req, res, parsedUrl) => {
       // Add assetPrefix support based on the hostname
-      if (req.headers.host === 'docs.zeit.sh') {
+      if (req.headers.host === 'docs.niltree.com') {
         // Set the cloudinary custom origin which points to https://docs.zeit.sh
-        app.setAssetPrefix('https://assets.zeit.co/raw/upload/docs-assets')
+        app.setAssetPrefix(
+          'https://raw.githubusercontent.com/niltree/book/master'
+        )
       } else if (/localhost/.test(req.headers.host)) {
         // Set the assetPrefix for localhost
         // It needs to be the http version

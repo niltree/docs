@@ -4,7 +4,7 @@
 module.exports = {
   VERSION: require('./package').version,
   'process.env.NODE_ENV': process.env.NODE_ENV,
-  IMAGE_ASSETS_URL: 'https://assets.zeit.co/image/upload/front',
-  VIDEO_ASSETS_URL: 'https://assets.zeit.co/video/upload/front',
-  RAW_ASSETS_URL: 'https://assets.zeit.co/raw/upload/front'
+  IMAGE_ASSETS_URL: 'https://raw.githubusercontent.com/niltree/docs/master',
+  VIDEO_ASSETS_URL: 'https://raw.githubusercontent.com/niltree/docs/master',
+  RAW_ASSETS_URL: 'https://raw.githubusercontent.com/niltree/docs/master'
 }
