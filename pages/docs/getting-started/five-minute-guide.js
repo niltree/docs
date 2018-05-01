@@ -16,7 +16,7 @@ export default withDoc({
   title: 'Five Minute Guide',
   date: '30 April 2018',
   authors: [shawwn],
-  editUrl: 'pages/docs/getting-started/five-minute-guide-to-now.js',
+  editUrl: 'pages/docs/getting-started/five-minute-guide.js',
 })(markdown(components)`
 
 Niltree can run any kind of WebGL website, twice as fast as Chrome. You can get this up and running in under five minutes.
