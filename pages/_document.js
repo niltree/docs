@@ -36,17 +36,18 @@ export default class Document extends Document_ {
   _paq.push(['enableLinkTracking']);
   (function() {
     var u="//next.niltree.com/p/";
-    _paq.push(['setTrackerUrl', u+'js/']);
+    _paq.push(['setTrackerUrl', u+'t.php?']);
     _paq.push(['setSiteId', '1']);
+    _paq.push(['setAPIUrl', u]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/'; s.parentNode.insertBefore(g,s);
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'t.js'; s.parentNode.insertBefore(g,s);
   })();`
             }}
           />
           <noscript>
             <p>
               <img
-                src="//next.niltree.com/p/js/?idsite=1&rec=1"
+                src="//next.niltree.com/p/t.php?idsite=1&rec=1"
                 style={{ border: 0 }}
                 alt=""
               />
