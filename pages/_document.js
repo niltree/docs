@@ -33,10 +33,10 @@ export default class Document extends Document_ {
             _paq.push(['enableLinkTracking']);
             (function() {
               var u="//next.niltree.com/p/";
-              _paq.push(['setTrackerUrl', u+'p.php']);
+              _paq.push(['setTrackerUrl', u+'js/']);
               _paq.push(['setSiteId', '1']);
               var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-              g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'p.js'; s.parentNode.insertBefore(g,s);
+              g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/'; s.parentNode.insertBefore(g,s);
             })();`
             }}
           />
